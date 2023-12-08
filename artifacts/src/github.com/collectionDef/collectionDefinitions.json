@@ -1,0 +1,61 @@
+[
+  {
+    "name": "hospCollection",
+    "policy": "OR('HospitalMSP.member')",
+    "requiredPeerCount": 0,
+    "maxPeerCount": 3,
+    "blockToLive":1000000,
+    "memberOnlyRead": true,
+    "memberOnlyWrite": false,
+    "endorsementPolicy": {
+      "signaturePolicy": "OR('HospitalMSP.member')"
+    }
+  },
+  {
+    "name": "patientPrivateCollection",
+    "policy": "OR('HospitalMSP.member')",
+    "requiredPeerCount": 0,
+    "maxPeerCount": 3,
+    "blockToLive":1000000,
+    "memberOnlyRead": true,
+    "endorsementPolicy": {
+      "signaturePolicy": "OR('HospitalMSP.member')"
+    }
+  },
+  {
+    "name": "pharmaCollection",
+    "policy": "OR('HospitalMSP.member', 'PharmacyMSP.member')",
+    "requiredPeerCount": 0,
+    "maxPeerCount": 1,
+    "blockToLive": 3,
+    "memberOnlyRead": true,
+    "memberOnlyWrite": false,
+    "endorsementPolicy": {
+      "signaturePolicy": "OR('HospitalMSP.member')"
+    }
+  },
+  {
+    "name": "BillCollection",
+    "policy": "OR('HospitalMSP.member', 'InsuranceMSP.member')",
+    "requiredPeerCount": 0,
+    "maxPeerCount": 1,
+    "blockToLive": 3,
+    "memberOnlyRead": true,
+    "memberOnlyWrite": false,
+    "endorsementPolicy": {
+      "signaturePolicy": "OR('HospitalMSP.member')"
+    }
+  },
+  {
+    "name": "LabReportCollection",
+    "policy": "OR('HospitalMSP.member', 'LaboratoryMSP.member')",
+    "requiredPeerCount": 0,
+    "maxPeerCount": 1,
+    "blockToLive": 3,
+    "memberOnlyRead": true,
+    "memberOnlyWrite": false,
+    "endorsementPolicy": {
+      "signaturePolicy": "OR('HospitalMSP.member', 'LaboratoryMSP.member')"
+    }
+  }
+]

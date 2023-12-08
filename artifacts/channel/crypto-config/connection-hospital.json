@@ -1,0 +1,51 @@
+{
+    "name": "first-network-hospital",
+    "version": "1.0.0",
+    "client": {
+        "organization": "Hospital",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "Hospital": {
+            "mspid": "HospitalMSP",
+            "peers": [
+                "peer0.hospital.healthvault.com"
+            ],
+            "certificateAuthorities": [
+                "ca.hospital.healthvault.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.hospital.healthvault.com": {
+            "url": "grpcs://localhost:7051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIUNclswfnDwbopHVU5+V2RsvxTxKIwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIzMDYxMTE4NTcwMFoXDTM4MDYwNzE4NTcwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEaHC58ZEZ3L97MfJjHUBCcZLC\n/lwE3ZfFcaF89ZXHEeQkgMb577+0frDcLhKKbWNtABVEpABUHpn/+zWetIu+ZqNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFKJEdUF9kuincqxMX22FgaisjFYTMAoGCCqGSM49BAMCA0cAMEQCIGgIjkSVfGNW\neQIR/HnRxuE84QNokQEShzfY6KUiUDdkAiBVboDSk9alVCxyMBVm41v0/9yWrG3+\nF28h+LQLQ81KzQ==\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.hospital.healthvault.com",
+                "hostnameOverride": "peer0.hospital.healthvault.com"
+            }
+        }
+
+	
+    },
+    "certificateAuthorities": {
+        "ca.hospital.healthvault.com": {
+            "url": "https://localhost:7054",
+            "caName": "ca.hospital.healthvault.com",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIUNclswfnDwbopHVU5+V2RsvxTxKIwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIzMDYxMTE4NTcwMFoXDTM4MDYwNzE4NTcwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEaHC58ZEZ3L97MfJjHUBCcZLC\n/lwE3ZfFcaF89ZXHEeQkgMb577+0frDcLhKKbWNtABVEpABUHpn/+zWetIu+ZqNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFKJEdUF9kuincqxMX22FgaisjFYTMAoGCCqGSM49BAMCA0cAMEQCIGgIjkSVfGNW\neQIR/HnRxuE84QNokQEShzfY6KUiUDdkAiBVboDSk9alVCxyMBVm41v0/9yWrG3+\nF28h+LQLQ81KzQ==\n-----END CERTIFICATE-----\n"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "name": "first-network-insurance",
+    "version": "1.0.0",
+    "client": {
+        "organization": "Insurance",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "Insurance": {
+            "mspid": "InsuranceMSP",
+            "peers": [
+                "peer0.insurance.healthvault.com"
+            ],
+            "certificateAuthorities": [
+                "ca.insurance.healthvault.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.insurance.healthvault.com": {
+            "url": "grpcs://localhost:9051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIUWbBnuxTQYlrbccgpzMf2KIvLELwwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIzMDUwNDA3MzQwMFoXDTM4MDQzMDA3MzQwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAENrANg5CaPvs6omqvq7Vktx8z\nYr/Ei9h5pbd9LScxWUsYKvHJ7K6Y21VFSK5T3CzzbRQHPS+MRREK8718X6w22KNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFBPmP42m2IsX4YGwhTFsQVaIXziwMAoGCCqGSM49BAMCA0cAMEQCIDY6XpdnvdN+\n2slhQnWxNder0RKgt2sK2ZhFCf/YyqQNAiBRjkniAEefS4XzpPFOnO+gRVzRDhf7\nH3LoYvLdy6SChQ==\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.insurance.healthvault.com",
+                "hostnameOverride": "peer0.insurance.healthvault.com"
+            }
+        }
+
+	
+    },
+    "certificateAuthorities": {
+        "ca.insurance.healthvault.com": {
+            "url": "https://localhost:11054",
+            "caName": "ca.insurance.healthvault.com",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIUWbBnuxTQYlrbccgpzMf2KIvLELwwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIzMDUwNDA3MzQwMFoXDTM4MDQzMDA3MzQwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAENrANg5CaPvs6omqvq7Vktx8z\nYr/Ei9h5pbd9LScxWUsYKvHJ7K6Y21VFSK5T3CzzbRQHPS+MRREK8718X6w22KNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFBPmP42m2IsX4YGwhTFsQVaIXziwMAoGCCqGSM49BAMCA0cAMEQCIDY6XpdnvdN+\n2slhQnWxNder0RKgt2sK2ZhFCf/YyqQNAiBRjkniAEefS4XzpPFOnO+gRVzRDhf7\nH3LoYvLdy6SChQ==\n-----END CERTIFICATE-----\n"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}

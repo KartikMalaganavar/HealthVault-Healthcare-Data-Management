@@ -1,0 +1,146 @@
+const result = await ctx.ClientIdentity.assertAttributeValue(
+      `${key}`,
+      `${value}`
+    );
+    const mspid = await ctx.ClientIdentity.getMSPID();
+    if (result && mspid === MSPID) {
+      
+    }
+else {
+ throw new Error(`Not Authorized to Access`);
+}
+
+if (!(!!exists && exists.length  > 0)) 
+
+key,value,MSPID
+
+
+const exists = await this.doctorExists(ctx, doctorId);
+    if (!exists) {
+      throw new Error(`The patient ${doctorId} does not exist`);
+    }
+
+
+const buffer = Buffer.from(JSON.stringify(patient));
+await ctx.stub.putState(patientId, buffer);
+
+
+const buffer = await ctx.stub.getState(patientId);
+const asset = JSON.parse(buffer.toString())
+
+    
+// const exists = await ctx.stub.getPrivateData("hospCollection", doctorId);
+// const exists = await ctx.stub.getPrivateData("hospCollection",patientId);
+
+
+
+
+const buffer = Buffer.from(JSON.stringify(patient));
+      await ctx.stub.putPrivateData("hospCollection", patientId, buffer);
+
+
+
+
+
+
+
+
+
+      
+/*
+let patientData = {
+  patientId: "",
+  firstname: "",
+  lastname: "",
+  dob: "",
+  gender: "",
+  address: "",
+  phoneNo: "",
+  emailId: "",
+  emergencyContactNo: "",
+  password: "",
+};
+
+let patientPrivatedata = {
+  symptoms: "",
+  diagnosis: "",
+  treatement: "",
+  followup: "",
+  permissionGranted: "",
+};
+
+let doctordetails = {
+  doctorId: "",
+  firstname: "",
+  lastname: "",
+  age: "",
+  phoneNo: "",
+  emailId: " ",
+  address: "",
+  bloodgroup: "",
+  password: "",
+  field: "",
+  department: "",
+};
+
+let prescription = {
+  patientId: "",
+  checkup: "",
+  scans: "",
+  signedBy: "",
+};
+
+let Admindetails = {
+  emailId: "",
+  password: "",
+};
+
+let Bill_ManagerDetails = {
+  managerId: "",
+  firstname: "",
+  lastname: "",
+  emailId: "",
+  password: "",
+  phno: "",
+  address: "",
+};
+
+let Bill_data = {
+  patientId: "",
+  patientFirstname: "",
+  patientLastname: "",
+  hopsitalName: "",
+  hospitalId: "",
+  patientInsuranceNo: "",
+  detailedReport: "",
+  additionalDetails: "",
+  billno: "",
+  billCreationDate: "",
+  billCreationTime: "",
+  generatedBy: "",
+};
+
+const LabortaoryReportDetails = {
+  reportId: "",
+  labId: "",
+  patientId: "",
+  diagnosis: "",
+  detailedReport: "",
+  attachments: "",
+  signedAuthority: "",
+  reportCreationDate: "",
+  reportCreationTime: "",
+};
+
+const pharmacyPrescription = {
+  pharmaId: "",
+  patientId: "",
+  tablet: "",
+  syrup: "",
+  injections: "",
+  others: "",
+  description: "",
+  signedByDoctor: "",
+};
+
+*/

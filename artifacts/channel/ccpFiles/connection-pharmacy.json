@@ -1,0 +1,51 @@
+{
+    "name": "first-network-pharmacy",
+    "version": "1.0.0",
+    "client": {
+        "organization": "Pharmacy",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "Pharmacy": {
+            "mspid": "PharmacyMSP",
+            "peers": [
+                "peer0.pharmacy.healthvault.com"
+            ],
+            "certificateAuthorities": [
+                "ca.pharmacy.healthvault.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.pharmacy.healthvault.com": {
+            "url": "grpcs://localhost:7053",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFzCCAb2gAwIBAgIUANdHHhcBATxal3ArpVsOaeu/wOYwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIzMDYxMTE4NTcwMFoXDTM4MDYwNzE4NTcwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE2OmXb0nZLClXmJk6rClLDrWC\nZ4WKB/1PIkJS2vFe2Ks8ShsRTFfDHp+RmHsBQOTRYGUf7A3F3Biz85mzkkeI1KNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFMY31zjc+K1y8uLK+jOrMn3mF9Z4MAoGCCqGSM49BAMCA0gAMEUCIQD4Romglj5A\nX4EHhttPV1CnajFIceGlMIGQCopm9EDAIwIgInW2W2PAuePVUM9Cd3/CLxu40XBQ\n1V8J51BLX9uOwos=\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.pharmacy.healthvault.com",
+                "hostnameOverride": "peer0.pharmacy.healthvault.com"
+            }
+        }
+
+	
+    },
+    "certificateAuthorities": {
+        "ca.pharmacy.healthvault.com": {
+            "url": "https://localhost:10054",
+            "caName": "ca.pharmacy.healthvault.com",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFzCCAb2gAwIBAgIUANdHHhcBATxal3ArpVsOaeu/wOYwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIzMDYxMTE4NTcwMFoXDTM4MDYwNzE4NTcwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE2OmXb0nZLClXmJk6rClLDrWC\nZ4WKB/1PIkJS2vFe2Ks8ShsRTFfDHp+RmHsBQOTRYGUf7A3F3Biz85mzkkeI1KNF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFMY31zjc+K1y8uLK+jOrMn3mF9Z4MAoGCCqGSM49BAMCA0gAMEUCIQD4Romglj5A\nX4EHhttPV1CnajFIceGlMIGQCopm9EDAIwIgInW2W2PAuePVUM9Cd3/CLxu40XBQ\n1V8J51BLX9uOwos=\n-----END CERTIFICATE-----\n"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}

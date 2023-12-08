@@ -1,0 +1,17 @@
+# Golang
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+
+# Node.js
+node_modules/

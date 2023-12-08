@@ -1,0 +1,11 @@
+version: 0
+tlsconfig:
+  certpath: ""
+  keypath: ""
+  peercacertpath: ../crypto-config/peerOrganizations/hospital.healthvault.com/peers/peer0.hospital.healthvault.com/msp/tlscacerts/tlsca.hospital.healthvault.com-cert.pem
+  timeout: 0s
+signerconfig:
+  mspid: HospitalMSP
+  identitypath: ../crypto-config/peerOrganizations/hospital.healthvault.com/users/User1@hospital.healthvault.com/msp/signcerts/User1@hospital.healthvault.com-cert.pem
+  keypath: ../crypto-config/peerOrganizations/hospital.healthvault.com/users/User1@hospital.healthvault.com/msp/keystore/priv_sk
+  
